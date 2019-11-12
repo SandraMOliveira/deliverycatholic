@@ -11,6 +11,8 @@ import { CriarContaComponent } from './usuarios/criar-conta/criar-conta.componen
 import { EsqueciSenhaComponent } from './usuarios/esqueci-senha/esqueci-senha.component';
 import { LoginComponent } from './usuarios/login/login.component';
 import { AuthGuard } from './usuarios/shared/auth.guard';
+import { ListaPedidosComponent } from './pedidos/lista-pedidos/lista-pedidos.component';
+import { DetalhePedidoComponent } from './pedidos/detalhe-pedido/detalhe-pedido.component';
 
 const routes: Routes = [
   {
@@ -19,6 +21,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent },
+
+      { path: 'pedidos', component: ListaPedidosComponent },
+      { path: 'pedidos/detalhe/:key', component: DetalhePedidoComponent },
+
       { path: 'categorias', component: ListaCategoriasComponent },
       { path: 'categorias/nova', component: FormCategoriasComponent },
       { path: 'categorias/editar/:key', component: FormCategoriasComponent },
