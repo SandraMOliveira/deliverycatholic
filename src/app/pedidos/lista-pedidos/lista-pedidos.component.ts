@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class ListaPedidosComponent implements OnInit {
   pedidos: Observable<any[]>;
   @Input() dashboardMode = false;
-  
+
   constructor(private pedidoService: PedidoService, private toastr: ToastrService) { }
 
   ngOnInit() {
@@ -26,15 +26,15 @@ export class ListaPedidosComponent implements OnInit {
     return this.pedidoService.getStatusNome(status);
   }
 
-  setStatusEmPreparacao(pedido: any) {    
+  setStatusEmPreparacao(pedido: any) {
     this.setStatusPedido(pedido, PedidoService.STATUS.EM_PREPARACAO);
   }
 
-  setStatusSaiuParaEntrega(pedido: any) {    
+  setStatusSaiuParaEntrega(pedido: any) {
     this.setStatusPedido(pedido, PedidoService.STATUS.SAIU_PARA_ENTREGA);
   }
 
-  setStatusEntregue(pedido: any) {    
+  setStatusEntregue(pedido: any) {
     this.setStatusPedido(pedido, PedidoService.STATUS.ENTREGUE);
   }
 

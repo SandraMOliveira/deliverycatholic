@@ -13,6 +13,8 @@ import { LoginComponent } from './usuarios/login/login.component';
 import { AuthGuard } from './usuarios/shared/auth.guard';
 import { ListaPedidosComponent } from './pedidos/lista-pedidos/lista-pedidos.component';
 import { DetalhePedidoComponent } from './pedidos/detalhe-pedido/detalhe-pedido.component';
+import { DizimistaComponent } from './dizimista/dizimista.component';
+import { OracoesComponent } from './oracoes/oracoes.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,9 @@ const routes: Routes = [
       { path: 'produtos', component: ListaProdutosComponent },
       { path: 'produtos/nova', component: FormProdutosComponent },
       { path: 'produtos/editar/:key', component: FormProdutosComponent },
+
+      { path: 'dizimista' , component: DizimistaComponent },
+      { path: 'oracoes' , component: OracoesComponent },
 
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 

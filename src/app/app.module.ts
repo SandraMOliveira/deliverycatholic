@@ -24,6 +24,8 @@ import { LoginComponent } from './usuarios/login/login.component';
 import { EsqueciSenhaComponent } from './usuarios/esqueci-senha/esqueci-senha.component';
 import { ListaPedidosComponent } from './pedidos/lista-pedidos/lista-pedidos.component';
 import { DetalhePedidoComponent } from './pedidos/detalhe-pedido/detalhe-pedido.component';
+import { DizimistaComponent } from './dizimista/dizimista.component';
+import { OracoesComponent } from './oracoes/oracoes.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { DetalhePedidoComponent } from './pedidos/detalhe-pedido/detalhe-pedido.
     LoginComponent,
     EsqueciSenhaComponent,
     ListaPedidosComponent,
-    DetalhePedidoComponent
+    DetalhePedidoComponent,
+    DizimistaComponent,
+    OracoesComponent
   ],
   imports: [
     BrowserModule,
