@@ -16,7 +16,10 @@ oracoes: Observable<any[]>;
               private toastr: ToastrService) { }
 
   ngOnInit() {
-    this.oracoes = this.oracoesService.getAll();
+    // this.oracoes = this.oracoesService.getAll();
+    const subscribe = this.oracoesService.getAll().subscribe( (dados:any) =>{
+      this.oracoes = dados;
+  });
   }
 
   remover(key: string) {
